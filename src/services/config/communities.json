@@ -127,7 +127,7 @@
             {
                 "name": "Cotiser",
                 "icon": "https://assets.citizenwallet.xyz/wallet-config/_images/class.png",
-                "url": "https://laclasse.be/payment",
+                "url": "https://laclass.be/payment",
                 "action": "topup",
                 "signature": true,
                 "token_address": "0x601D2Dc12bE367d1653d803827875c2Bcaeb4A20"
