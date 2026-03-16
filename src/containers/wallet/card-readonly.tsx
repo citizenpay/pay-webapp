@@ -22,6 +22,8 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "@/lib/use-translation";
+import { Bot } from "lucide-react";
+import Link from "next/link";
 interface ContainerProps {
   config: Config;
   accountAddress: string;
@@ -222,6 +224,14 @@ export default function ReadOnly({
           className="w-full max-w-xl pt-[min(76vw,456px)] px-8 pb-16"
           gap="3"
         >
+          <Link
+            href={`/${accountAddress}/agent-wallet`}
+            className="w-full flex items-center gap-2 px-4 py-3 rounded-lg border bg-card text-card-foreground shadow-sm hover:bg-accent transition-colors"
+          >
+            <Bot className="h-4 w-4" />
+            <span className="text-sm font-medium">Agent Wallet</span>
+          </Link>
+
           {!loadingTransactions && !loading && transactions.length === 0 && (
             <Flex
               justify="center"
